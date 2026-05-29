@@ -1,0 +1,191 @@
+{
+  "users": [
+    {
+      "email": "demo@pennywise.com",
+      "password": "$2a$10$YqAHRcRxJWmBWPkEHRN7/OtV8AjhJI91kVpeslvRBLhODTQW0/fIK",
+      "id": 1
+    },
+    {
+      "email": "shrestha@demo.com",
+      "password": "$2a$10$Rm4eH3MXKZG4Yc7tnqxfi.jEM/rIEZdFqw4OxSA/pkay5VEj9EXPe",
+      "id": 2
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "userId": 1,
+      "type": "expense",
+      "category": "Food",
+      "amount": 450,
+      "description": "Lunch",
+      "createdAt": "2026-05-01",
+      "status": 1
+    },
+    {
+      "id": "2",
+      "userId": 1,
+      "type": "income",
+      "category": "Salary",
+      "amount": 45000,
+      "description": "Test",
+      "createdAt": "2026-02-07",
+      "status": 1
+    },
+    {
+      "id": "3",
+      "userId": 1,
+      "type": "expense",
+      "category": "Grocery",
+      "amount": 670,
+      "description": "Test",
+      "createdAt": "2026-05-13",
+      "status": 1
+    },
+    {
+      "id": "4",
+      "userId": 1,
+      "type": "income",
+      "category": "refund",
+      "amount": 345,
+      "description": "Test",
+      "createdAt": "2026-09-04",
+      "status": 1
+    },
+    {
+      "id": "5",
+      "userId": 1,
+      "type": "expense",
+      "category": "Food",
+      "amount": 234,
+      "description": "Test",
+      "createdAt": "2026-12-01",
+      "status": "0"
+    },
+    {
+      "id": "6",
+      "userId": 1,
+      "type": "income",
+      "category": "refund",
+      "amount": 7800,
+      "description": "Test",
+      "createdAt": "2026-05-07",
+      "status": 1
+    },
+    {
+      "userId": 1,
+      "type": "income",
+      "category": "Salary",
+      "amount": 34555,
+      "description": "salary",
+      "createdAt": "2026-05-27",
+      "status": "0",
+      "id": "dKU6nit_NFY"
+    },
+    {
+      "userId": 1,
+      "type": "expense",
+      "category": "entertainment",
+      "amount": 3456,
+      "description": "event",
+      "createdAt": "2026-05-27",
+      "status": "0",
+      "id": "MG2F8zs4VM0"
+    },
+    {
+      "userId": 1,
+      "type": "income",
+      "category": "entertainment",
+      "amount": 233,
+      "description": "music",
+      "createdAt": "2026-05-27",
+      "status": 1,
+      "id": "WriU6HxCG9Y"
+    },
+    {
+      "userId": 1,
+      "type": "expense",
+      "category": "others",
+      "amount": 4567,
+      "description": "fee",
+      "createdAt": "2026-05-27",
+      "status": 1,
+      "id": "bg472D2z5P8"
+    },
+    {
+      "userId": 1,
+      "type": "income",
+      "category": "freelance",
+      "amount": 500,
+      "description": "design",
+      "createdAt": "2026-05-27",
+      "status": 1,
+      "id": "zf61kl8_-z0"
+    },
+    {
+      "type": "expense",
+      "category": "Grocery",
+      "amount": 478,
+      "description": "Essentials",
+      "createdAt": "2026-05-29",
+      "status": 1,
+      "userId": 1,
+      "id": "178003622674577qg3i"
+    },
+    {
+      "type": "income",
+      "category": "refund",
+      "amount": 799,
+      "description": "shopping refund",
+      "createdAt": "2026-05-29",
+      "status": 1,
+      "userId": 1,
+      "id": "1780036286972mvy4jc"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Food"
+    },
+    {
+      "id": "2",
+      "name": "Grocery"
+    },
+    {
+      "id": "3",
+      "name": "Salary"
+    },
+    {
+      "id": "4",
+      "name": "refund"
+    },
+    {
+      "id": "5",
+      "name": "entertainment"
+    },
+    {
+      "id": "6",
+      "name": "transport"
+    },
+    {
+      "id": "7",
+      "name": "freelance"
+    },
+    {
+      "id": "8",
+      "name": "others"
+    }
+  ],
+  "types": [
+    {
+      "id": "1",
+      "name": "expense"
+    },
+    {
+      "id": "2",
+      "name": "income"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
