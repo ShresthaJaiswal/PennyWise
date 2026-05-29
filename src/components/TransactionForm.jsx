@@ -1,24 +1,12 @@
 import { useForm, Controller } from 'react-hook-form'
 import { TextField, Button, MenuItem, Select, InputLabel, FormControl, FormHelperText, Box } from '@mui/material'
-import { useEffect } from 'react'
 
 
 export default function TransactionForm({ types, categories, defaultValues, onSubmit, isLoading }) {
 
-    const { reset, register, handleSubmit, control, formState: { errors }} = useForm({
-        defaultValues: {
-            type: defaultValues?.type || '',
-            category: defaultValues?.category || '',
-            amount: defaultValues?.amount || '',
-            description: defaultValues?.description || ''
-        }}
-    ) // values are set only on first render, so we need to reset when defaultValues change
-
-    // useEffect(() => {
-    //     if (defaultValues) reset(defaultValues)
-    // }, [defaultValues, reset])
-
-    // avoid useEffect
+    const { register, handleSubmit, control, formState: { errors }} = useForm({
+        values: defaultValues || { type: '', category: '', amount: '', description: '' }
+    })
 
     return (
         <Box

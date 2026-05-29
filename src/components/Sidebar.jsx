@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import { Box, Typography, Tooltip } from '@mui/material'
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 import IconButton from '@mui/material/IconButton'
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import LogoutIcon from '@mui/icons-material/Logout'
@@ -26,16 +26,8 @@ export default function Sidebar() {
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-    const [collapsed, setCollapsed] = useState(isMobile)
-
-    const isMountedRef = useRef(false)
-    useEffect(() => {
-        if (isMountedRef.current) {
-            setCollapsed(isMobile)
-        } else {
-            isMountedRef.current = true
-        }
-    }, [isMobile])
+    const [collapsed, setCollapsed] = useState(() => isMobile)  // () => isMobile is a lazy initializer
+    // runs once on mount, sets initial state based on screen size at that moment. After that, collapsed is fully controlled by the toggle, on both mobile and desktop.
 
     return (
         <Box
@@ -53,7 +45,7 @@ export default function Sidebar() {
                     <Typography variant="body1" fontWeight="bold" noWrap sx={{ fontSize: 15 }}>
                         PennyWise
                     </Typography>}
-                <IconButton onClick={() => setCollapsed(!collapsed)} sx={{ color: 'white', p: 0.5 }}>
+                <IconButton onClick={() => setCollapsed(prev => !prev)} sx={{ color: 'white', p: 0.5 }}>
                     <ChevronLeftIcon sx={{ fontSize: 20, transform: collapsed ? 'rotate(180deg)' : 'none', transition: '0.3s', color: 'white' }} />
                 </IconButton>
             </Box>
